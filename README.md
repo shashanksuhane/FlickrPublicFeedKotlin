@@ -54,3 +54,8 @@ Couple of well adapted libraries has been used in this project.
 
 **ButterKnife** – Used to bind android views and reduce the boiler place code.
 
+<br/>
+
+**APP ARCHITECTURE FLOW - HIGH LEVEL**
+
+![alt text](AppArchFlowFlickrPublicFeed.png)
