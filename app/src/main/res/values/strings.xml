@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FlickrPublicFeed</string>
+
+    <string name="title_kittens">Kittens</string>
+    <string name="title_dogs">Dogs</string>
+    <string name="title_public_feed">Public Feed</string>
+
+    <string name="load_data_error">Failed to load data.  Please check your connectivity.</string>
+    <string name="search_photo_error">Failed to search %1$s, with error: %2$s</string>
+    <string name="photo_redirect_button">GO</string>
+    <string name="photo_share_option">Share using</string>
+
+</resources>
