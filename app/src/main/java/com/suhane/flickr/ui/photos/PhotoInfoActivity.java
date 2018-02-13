@@ -11,7 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.suhane.flickr.FlickrPFApplication;
 import com.suhane.flickr.R;
@@ -68,11 +70,24 @@ public class PhotoInfoActivity extends BaseActivity implements PhotoInfoViewMode
         //for now just url is enough, so no need to get more info on photo
         //viewModel.getInfo(photo.getId());
 
+        showProgress();
+
         Picasso.with(this)
                 .load(photo.getUrlC())
                 .fit()
                 .centerInside()
-                .into(photoView);
+                .into(photoView, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        hideProgress();
+                    }
+
+                    @Override
+                    public void onError() {
+                        hideProgress();
+                        Toast.makeText(getBaseContext(), getText(R.string.load_data_error), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
         launchGo.setOnClickListener(new View.OnClickListener() {
             @Override
