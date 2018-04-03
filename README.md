@@ -2,7 +2,6 @@
 
 ![alt text](FlickrPublicFeedKotlin.gif)
 
-
 This is a Kotlin based Android Project which makes use of flickr photo search API to get the photos and allows the user to navigate through them. 
 
 
