@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FlickrPublicFeed</string>
+    <string name="app_name">FlickrPublicFeedKotlin</string>
 
     <string name="title_kittens">Kittens</string>
     <string name="title_dogs">Dogs</string>

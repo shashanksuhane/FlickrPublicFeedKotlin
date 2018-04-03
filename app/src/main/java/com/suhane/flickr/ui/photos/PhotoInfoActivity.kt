@@ -93,8 +93,10 @@ class PhotoInfoActivity : BaseActivity(), IPhotoInfoViewModel.View {
 
         launchGo!!.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(photo!!.urlC)
-            startActivity(i)
+            if (photo!!.urlC != null) {
+                i.data = Uri.parse(photo!!.urlC)
+                startActivity(i)
+            }
         }
 
     }
